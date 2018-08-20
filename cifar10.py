@@ -51,7 +51,7 @@ conv3 = tf.layers.conv2d(inputs = conv2_pool, filters = 256, kernel_size = [5,5]
 conv3_pool = tf.layers.max_pooling2d(inputs = conv3, pool_size = [3,3], strides = 2 , padding = 'same')
 
  
-flat = tf.contrib.layers.flatten(conv3_input)
+flat = tf.contrib.layers.flatten(conv3_pool)
 
 #Fully Connected Layer 1
 fc1 = tf.layers.dense(flat,2048,activation = tf.nn.relu)
